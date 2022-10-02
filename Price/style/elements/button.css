@@ -1,0 +1,28 @@
+.btn {
+  border: none;
+  background-color: var(--gray-color);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: 5px;
+}
+.btn-block {
+  width: 100%;
+}
+.btn[class*="primary"] {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn[class*="secoundary"] {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn:hover {
+  background-color: var(--green-light-color);
+}
+
+.btn:active {
+  background-color: var(--green-dark-color);
+}

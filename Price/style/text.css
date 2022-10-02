@@ -1,0 +1,8 @@
+.paragraph {
+  /* font-size: var(--text-md); */
+  font-family: var(--roboto);
+  line-height: 1.8;
+}
+.text-wrap {
+  word-wrap: break-word;
+}

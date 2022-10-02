@@ -1,0 +1,26 @@
+.card {
+  display: block;
+  width: 50%;
+  max-height: 80%;
+}
+
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-subscription {
+  flex-basis: 50%;
+}
+.card-why {
+  flex-basis: 50%;
+}
+.card-price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .card-body {
+    flex-direction: column;
+  }
+}
