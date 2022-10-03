@@ -1,0 +1,35 @@
+.h1 {
+  font-size: var(--header-xl);
+  font-family: var(--anton);
+}
+.h2 {
+  font-size: var(--header-lg);
+}
+.h3 {
+  font-size: var(--header-md);
+  font-family: var(--anton);
+}
+.h4 {
+  font-size: var(--text-sm);
+}
+.h5 {
+  font-size: var(--text-xs);
+}
+.text-xxl {
+  font-size: var(--text-xxl);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-md {
+  font-size: var(--text-md);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-xs {
+  font-size: var(--text-xs);
+}

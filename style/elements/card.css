@@ -1,0 +1,31 @@
+.card-group {
+  max-height: 80%;
+  display: flex;
+  gap: 3px;
+  /* flex-wrap: wrap; */
+}
+.card {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+.card-img {
+  width: 100%;
+  height: 300px;
+}
+.card-click:hover {
+  scale: 1.1;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--gray-color);
+}
+.card-click:active {
+  background-color: var(--green-dark-color);
+}
+@media screen and (max-width: 1024px) {
+  .card-group {
+    flex-direction: column;
+  }
+}
