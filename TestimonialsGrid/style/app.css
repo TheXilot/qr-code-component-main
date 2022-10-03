@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+:root {
+  --card-bg: #1c1937;
+  --main-bg: #0b0c1b;
+  --violet-color: #65469d;
+  --white-color: #fdfeff;
+  --white-light: hsl(0, 0%, 81%);
+  --black-color: #000;
+  --black-light: rgb(84, 84, 84);
+  --gray-color: #49556b;
+}
+.white-text {
+  color: var(--white-color);
+}
+.white-light-text {
+  color: var(--white-light);
+}
+.black-text {
+  color: var(--black-color);
+}
+.black-light-text {
+  color: var(--black-light);
+}
+/* backround colors */
+.violet-bg {
+  background-color: var(--violet-color);
+}
+.gray-bg {
+  background-color: var(--gray-color);
+}
+.white-bg {
+  background-color: var(--white-color);
+}
+.black-bg {
+  background-color: var(--black-color);
+}
+/* backround colors */
+
+/* Text sizing */
+.text-lg {
+  font-size: 18px;
+}
+.text-md {
+  font-size: 13px;
+}
+.bold {
+  font-weight: 700;
+}
+/* Text sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* .text-violet {
+  color: var(--violet-color);
+} */
+.h1 {
+  color: var(--white-color);
+  font-weight: 700;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+}
+.paragraph {
+  padding-bottom: 1rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.card-group {
+  display: grid;
+  gap: 25px;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+  margin-top: 12vh;
+}
+@media (min-width: 50em) {
+  .card-group {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card:last-child {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+}
+.card {
+  padding: 2rem;
+  border-radius: 10px;
+  /* width: 400px; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 13px -7px #000000, 6px 5px 6px 6px rgba(0, 0, 0, 0.15);
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.author-img {
+  border-radius: 100%;
+  width: 3em;
+  border: 1px double rgba(255, 255, 255, 0.456);
+}
