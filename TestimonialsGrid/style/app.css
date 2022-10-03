@@ -72,12 +72,40 @@ body {
 }
 .card-group {
   display: grid;
+  grid-auto-columns: 1fr;
   gap: 25px;
   width: min(95%, 70rem);
   margin-inline: auto;
   margin-top: 12vh;
 }
+/* With Template area */
+@media (min-width: 30em) {
+  .card-group {
+    grid-template-areas: "one one two" "three five five" "four four four";
+  }
+  .card:nth-child(1) {
+    grid-area: one;
+  }
+  .card:nth-child(2) {
+    grid-area: two;
+  }
+  .card:nth-child(3) {
+    grid-area: three;
+  }
+  .card:nth-child(4) {
+    grid-area: four;
+  }
+  .card:nth-child(5) {
+    grid-area: five;
+  }
+}
 @media (min-width: 50em) {
+  .card-group {
+    grid-template-areas: "one one two five" "three four four five";
+  }
+}
+/* With Template area */
+/* @media (min-width: 50em) {
   .card-group {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -88,7 +116,7 @@ body {
   .grid-col-span-2 {
     grid-column: span 2;
   }
-}
+} */
 .card {
   padding: 2rem;
   border-radius: 10px;
