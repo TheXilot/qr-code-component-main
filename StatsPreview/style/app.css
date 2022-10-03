@@ -115,4 +115,7 @@ body {
     align-items: center;
     gap: 2rem;
   }
+  .stat {
+    text-align: center;
+  }
 }
