@@ -1,0 +1,118 @@
+:root {
+  --card-bg: #1c1937;
+  --main-bg: #0b0c1b;
+  --violet-color: #9c5dc9;
+  --white-color: #fdfeff;
+  --white-light: #fdfeff92;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.text-violet {
+  color: var(--violet-color);
+}
+.h1 {
+  color: var(--white-color);
+  font-weight: 700;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+}
+.paragraph {
+  color: var(--white-light);
+  font-size: 15px;
+  padding-bottom: 4rem;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg);
+  height: 100%;
+}
+.card {
+  border-radius: 10px;
+  width: 1102px;
+  height: 440px;
+  background-color: var(--card-bg);
+  display: flex;
+}
+.card-text {
+  flex-basis: 50%;
+  padding: 4rem;
+}
+.card-img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex-basis: 50%;
+  background: url("/StatsPreview/images/image-header-desktop.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.card-img::after {
+  content: "";
+  display: block;
+  background-color: #984cc87c;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.stats-group {
+  display: flex;
+  gap: 2rem;
+}
+.number {
+  font-size: 2rem;
+  color: var(--white-color);
+  font-weight: 700;
+}
+.text {
+  color: var(--white-light);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    height: auto;
+  }
+  .card {
+    margin-top: 2rem;
+    width: 70%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .card-text {
+    flex-basis: 100%;
+    align-items: center;
+  }
+  .card-img {
+    flex-basis: 100%;
+    background: url("/StatsPreview/images/image-header-mobile.jpg") no-repeat;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .card-img::after {
+    height: 40vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .stats-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
