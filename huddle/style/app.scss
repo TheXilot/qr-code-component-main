@@ -1,0 +1,76 @@
+@import url("/Price/style/rest.css");
+:root {
+  --violet: #fd52c2;
+  --white: #fff;
+}
+body {
+  width: 100%;
+}
+header {
+  //   height: 600px;
+  //   background-color: aqua;
+  padding: 4.5rem;
+  background-image: url("/huddle/images/bg-hero-desktop.svg");
+}
+.btn {
+  padding: 1rem 3.5rem;
+  border-radius: 40px;
+  box-shadow: -4px 3px 15px 0px rgba(0, 0, 0, 0.079);
+}
+.btn[class*="secondary"] {
+  background-color: var(--white);
+  color: black;
+}
+.btn[class*="primary"] {
+  background-color: var(--violet);
+  color: white;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem;
+  .logo-img {
+    height: 2rem;
+  }
+}
+.header-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.7;
+    padding-top: 5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    padding-bottom: 1.2rem;
+  }
+  .header-img {
+    width: 700px;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+main {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  .card {
+    display: flex;
+    box-shadow: -4px 3px 15px 0px rgba(0, 0, 0, 0.079);
+    padding: 2rem;
+    width: 80%;
+    img {
+      height: 350px;
+    }
+  }
+}
