@@ -11,6 +11,7 @@ body {
 header {
   padding: 4.5rem;
   background-image: url("/huddle/images/bg-hero-desktop.svg");
+  height: 718px;
 }
 
 .btn {
