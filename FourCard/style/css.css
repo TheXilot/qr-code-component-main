@@ -61,7 +61,6 @@ header p {
   color: var(--grayish-blue);
   padding-bottom: 2.5rem;
 }
-
 .card-group {
   display: grid;
   grid-auto-columns: 1fr;

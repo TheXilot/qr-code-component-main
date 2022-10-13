@@ -55,6 +55,8 @@ header {
     color: var(--grayish-blue);
     padding-bottom: 2.5rem;
   }
+  @media (max-width: 50rem) {
+  }
 }
 .card-group {
   display: grid;

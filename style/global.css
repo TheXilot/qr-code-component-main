@@ -8,3 +8,12 @@ body {
 main {
   width: 80%;
 }
+.card-group {
+  display: grid !important;
+  grid-gap: 20px !important;
+}
+@media (min-width: 769px) {
+  .card-group {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
