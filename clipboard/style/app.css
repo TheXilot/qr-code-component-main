@@ -84,8 +84,8 @@ header .btn {
   }
   header h3 {
     font-size: 20px;
-    padding-left: 20rem;
-    padding-right: 20rem;
+    max-width: 50vw;
+    margin: 0 auto;
   }
 }
 
@@ -158,8 +158,8 @@ main .btn {
     font-size: 36px;
   }
   main .sub-title {
-    padding-left: 20rem;
-    padding-right: 20rem;
+    max-width: 50vw;
+    margin: 0 auto;
     font-size: 19px;
   }
   main .full-container {
@@ -184,7 +184,8 @@ main .btn {
     display: flex;
   }
   main .container-group {
-    padding: 2rem 10rem;
+    margin: 0 auto;
+    max-width: 76vw;
   }
   main .column {
     display: flex;
@@ -197,6 +198,9 @@ main .btn {
   main .group-text-img {
     text-align: center;
     width: 33.3%;
+  }
+  main .group-logo img {
+    max-width: 15vw;
   }
 }
 
@@ -231,7 +235,7 @@ footer .row svg {
 @media (min-width: 376px) {
   footer {
     display: grid;
-    padding: 3rem 8rem;
+    padding: 3rem 5vw;
     padding-bottom: 0;
     grid-template-columns: 1fr 4fr 1fr;
   }

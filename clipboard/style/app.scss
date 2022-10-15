@@ -73,8 +73,8 @@ header {
     }
     h3 {
       font-size: 20px;
-      padding-left: 20rem;
-      padding-right: 20rem;
+      max-width: 50vw;
+      margin: 0 auto;
     }
   }
 }
@@ -147,8 +147,8 @@ main {
       font-size: 36px;
     }
     .sub-title {
-      padding-left: 20rem;
-      padding-right: 20rem;
+      max-width: 50vw;
+      margin: 0 auto;
       font-size: 19px;
     }
     .full-container {
@@ -173,7 +173,8 @@ main {
       display: flex;
     }
     .container-group {
-      padding: 2rem 10rem;
+      margin: 0 auto;
+      max-width: 76vw;
     }
     .column {
       display: flex;
@@ -187,6 +188,11 @@ main {
     .group-text-img {
       text-align: center;
       width: 33.3%;
+    }
+    .group-logo {
+      img {
+        max-width: 15vw;
+      }
     }
   }
 }
@@ -221,7 +227,7 @@ footer {
   }
   @media (min-width: 376px) {
     display: grid;
-    padding: 3rem 8rem;
+    padding: 3rem 5vw;
     padding-bottom: 0;
     grid-template-columns: 1fr 4fr 1fr;
     svg {
