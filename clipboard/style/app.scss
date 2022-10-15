@@ -1,0 +1,238 @@
+@import url("/Price/style/rest.css");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+:root {
+  --primary-color: hsl(171, 66%, 44%);
+  --secondary-color: hsl(233, 100%, 69%);
+  --black-color: #000;
+  --gray-dark-color: hsl(210, 10%, 33%);
+  --gray-light-color: hsl(201, 11%, 66%);
+  --footer-color: hsl(0deg 0% 96%);
+  --font: "Bai Jamjuree", sans-serif;
+}
+* {
+  font-family: var(--font);
+  font-size: 18px;
+}
+.btn {
+  padding: 1rem 4.8rem;
+  border-radius: 28px;
+  border: 0;
+  @media (min-width: 768px) {
+    padding: 1rem 3rem;
+    margin-right: 1rem;
+  }
+}
+.btn[class*="primary"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0px 4px 0px -1px green;
+}
+.btn[class*="secondary"] {
+  background-color: var(--secondary-color);
+  color: #fff;
+  box-shadow: 0px 4px 0px -1px hsl(233, 100%, 54%);
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+header {
+  padding: 2rem;
+  background: url("/clipboard/images/bg-header-mobile.png") no-repeat;
+  text-align: center;
+  svg {
+    margin-top: 6rem;
+  }
+  h1 {
+    margin-top: 57px;
+    font-size: 31px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--gray-dark-color);
+  }
+  h3 {
+    color: var(--gray-light-color);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 4px;
+    font-weight: 500;
+    padding-bottom: 46px;
+  }
+  .btn {
+    margin-bottom: 24px;
+  }
+  @media (min-width: 376px) {
+    background: url("/clipboard/images/bg-header-desktop.png") no-repeat;
+    padding-bottom: 6rem;
+    svg {
+      margin-top: 7rem;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    h3 {
+      font-size: 20px;
+      padding-left: 20rem;
+      padding-right: 20rem;
+    }
+  }
+}
+main {
+  padding: 2rem;
+  text-align: center;
+  h3 {
+    font-size: 26px;
+    color: var(--gray-dark-color);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    // padding-top: 4rem;
+  }
+  .sub-title,
+  p {
+    color: var(--gray-light-color);
+    line-height: 1.5;
+    font-size: 16px;
+    padding-bottom: 3.4rem;
+  }
+  .full-container {
+    margin-top: 4rem;
+  }
+  .img-big {
+    width: 100%;
+    padding-bottom: 3.6rem;
+  }
+  .img-device {
+    width: 100%;
+    padding-bottom: 6rem;
+  }
+  .icon {
+    padding-bottom: 2rem;
+    display: block;
+    margin: auto;
+  }
+  .group-text {
+    // padding: 3.4rem 0;
+    text-align: center;
+  }
+  .group-text-img {
+    // padding: 3.4rem 0;
+    text-align: center;
+  }
+  h4 {
+    color: var(--gray-dark-color);
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  .column {
+    padding-bottom: 8rem;
+  }
+  .row {
+    padding-top: 2rem;
+  }
+  .group-logo {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    img {
+      padding-bottom: 3rem;
+    }
+  }
+  .btn {
+    margin-bottom: 24px;
+  }
+  @media (min-width: 376px) {
+    padding-bottom: 9rem;
+    h3 {
+      font-size: 36px;
+    }
+    .sub-title {
+      padding-left: 20rem;
+      padding-right: 20rem;
+      font-size: 19px;
+    }
+    .full-container {
+      margin-top: 0;
+      padding-bottom: 4rem;
+      p {
+        padding-right: 16rem;
+      }
+    }
+    .img-big {
+      width: 60%;
+      height: 650px;
+      padding-bottom: 3.6rem;
+      transform: translateX(-10%);
+    }
+    .img-device {
+      width: 70%;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+    }
+    .row {
+      display: flex;
+    }
+    .container-group {
+      padding: 2rem 10rem;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .group-text {
+      // padding: 3.4rem 0;
+      text-align: left;
+    }
+    .group-text-img {
+      text-align: center;
+      width: 33.3%;
+    }
+  }
+}
+footer {
+  padding: 2rem;
+  background-color: var(--footer-color);
+  text-align: center;
+  padding-top: 3rem;
+  svg {
+    margin-bottom: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--gray-dark-color);
+    display: block;
+    padding-bottom: 2rem;
+  }
+  a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .link {
+    padding-bottom: 0.5rem;
+  }
+  .row {
+    svg {
+      width: 24px;
+      margin: 0 16px;
+    }
+  }
+  @media (min-width: 376px) {
+    display: grid;
+    padding: 3rem 8rem;
+    padding-bottom: 0;
+    grid-template-columns: 1fr 4fr 1fr;
+    svg {
+      width: 64px;
+      margin: 0;
+    }
+    .link {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: left;
+      width: 70%;
+    }
+  }
+}
