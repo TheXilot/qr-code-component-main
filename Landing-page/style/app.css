@@ -1,0 +1,228 @@
+@import url("/Price/style/rest.css");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --primary-color: hsl(171, 66%, 44%);
+  --secondary-color: hsl(233, 100%, 69%);
+  --black-color: #000;
+  --gray-dark-color: hsl(210, 10%, 33%);
+  --gray-light-color: hsl(201, 11%, 66%);
+  --footer-color: hsl(0deg 0% 96%);
+  --font: "Overpass", sans-serif;
+  --font-1: "Ubuntu", sans-serif;
+}
+
+* {
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.btn {
+  padding: 1rem 4.8rem;
+  border-radius: 28px;
+  border: 0;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 1rem 3rem;
+    margin-right: 1rem;
+  }
+}
+
+.btn[class*=primary] {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0px 4px 0px -1px green;
+}
+
+.btn[class*=secondary] {
+  background-color: var(--secondary-color);
+  color: #fff;
+  box-shadow: 0px 4px 0px -1px hsl(233deg, 100%, 54%);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+header {
+  height: 600px;
+}
+header .btn {
+  margin-bottom: 24px;
+}
+@media (min-width: 376px) {
+  header {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-repeat: no-repeat;
+    background: url("/Landing-page/images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, #ff8f70, hsl(353deg, 100%, 62%));
+    background-position: -20% 50%, right;
+    background-size: 190%, cover;
+    padding: 4rem 10rem;
+    border-bottom-left-radius: 6rem;
+  }
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+main h3 {
+  font-size: 26px;
+  color: var(--gray-dark-color);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+main .sub-title,
+main p {
+  color: var(--gray-light-color);
+  line-height: 1.5;
+  font-size: 16px;
+  padding-bottom: 3.4rem;
+}
+main .full-container {
+  margin-top: 4rem;
+}
+main .img-big {
+  width: 100%;
+  padding-bottom: 3.6rem;
+}
+main .img-device {
+  width: 100%;
+  padding-bottom: 6rem;
+}
+main .icon {
+  padding-bottom: 2rem;
+  display: block;
+  margin: auto;
+}
+main .group-text {
+  text-align: center;
+}
+main .group-text-img {
+  text-align: center;
+}
+main h4 {
+  color: var(--gray-dark-color);
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+main .column {
+  padding-bottom: 8rem;
+}
+main .row {
+  padding-top: 2rem;
+}
+main .group-logo {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+main .group-logo img {
+  padding-bottom: 3rem;
+}
+main .btn {
+  margin-bottom: 24px;
+}
+@media (min-width: 376px) {
+  main {
+    padding-bottom: 9rem;
+  }
+  main h3 {
+    font-size: 36px;
+  }
+  main .sub-title {
+    max-width: 50vw;
+    margin: 0 auto;
+    font-size: 19px;
+  }
+  main .full-container {
+    margin-top: 0;
+    padding-bottom: 4rem;
+  }
+  main .full-container p {
+    padding-right: 16rem;
+  }
+  main .img-big {
+    width: 60%;
+    height: 650px;
+    padding-bottom: 3.6rem;
+    transform: translateX(-10%);
+  }
+  main .img-device {
+    width: 70%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  main .row {
+    display: flex;
+  }
+  main .container-group {
+    margin: 0 auto;
+    max-width: 76vw;
+  }
+  main .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .group-text {
+    text-align: left;
+  }
+  main .group-text-img {
+    text-align: center;
+    width: 33.3%;
+  }
+  main .group-logo img {
+    max-width: 15vw;
+  }
+}
+
+footer {
+  padding: 2rem;
+  background-color: var(--footer-color);
+  text-align: center;
+  padding-top: 3rem;
+}
+footer svg {
+  margin-bottom: 2.5rem;
+  width: 60px;
+  height: 60px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--gray-dark-color);
+  display: block;
+  padding-bottom: 2rem;
+}
+footer a:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+footer .link {
+  padding-bottom: 0.5rem;
+}
+footer .row svg {
+  width: 24px;
+  margin: 0 16px;
+}
+@media (min-width: 376px) {
+  footer {
+    display: grid;
+    padding: 3rem 5vw;
+    padding-bottom: 0;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  footer svg {
+    width: 64px;
+    margin: 0;
+  }
+  footer .link {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    width: 70%;
+  }
+}/*# sourceMappingURL=app.css.map */
