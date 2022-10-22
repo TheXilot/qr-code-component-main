@@ -1,0 +1,51 @@
+$spacing: 1rem;
+
+$spacing-map: (
+  "0-5": calc($spacing * 0.5),
+  "1": calc($spacing * 1),
+  "1-5": calc($spacing * 1.5),
+  "2": calc($spacing * 2),
+  "2-5": calc($spacing * 2.5),
+  "3": calc($spacing * 2.7),
+  "4": calc($spacing * 3),
+  "5": calc($spacing * 3.5),
+  "6": calc($spacing * 4),
+  "7": calc($spacing * 5),
+  "8": calc($spacing * 6),
+  "max": calc($spacing * 8.5),
+);
+
+@each $name, $value in $spacing-map {
+  //padding all
+  .p-#{$name} {
+    padding: $value;
+  }
+  .pt-#{$name} {
+    padding-top: $value;
+  }
+  .pr-#{$name} {
+    padding-right: $value;
+  }
+  .pl-#{$name} {
+    padding-left: $value;
+  }
+  .pb-#{$name} {
+    padding-bottom: $value;
+  }
+  //margin all
+  .m-#{$name} {
+    margin: $value;
+  }
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+  .mr-#{$name} {
+    margin-right: $value;
+  }
+  .ml-#{$name} {
+    margin-left: $value;
+  }
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+}

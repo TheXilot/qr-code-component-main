@@ -1,0 +1,21 @@
+$colors-map: (
+  "primary": $primary,
+  "primary-l": $primary-l,
+  "secondary": $secondary,
+  "gray": $gray,
+  "gray-l": $gray-l,
+  "gray-ll": $gray-ll,
+  "blue": $blue,
+  "black": $black,
+  "white": $white,
+  "footer": $footer,
+);
+
+@each $name, $value in $colors-map {
+  .#{$name} {
+    color: $value;
+  }
+  .#{$name}-bg {
+    background-color: $value;
+  }
+}
