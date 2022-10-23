@@ -64,6 +64,32 @@ $font-sizing-map: (
 .btn[class*="secondary"]:hover {
   background-color: $primary-l !important;
   color: $secondary !important;
+} //
+
+@media (max-width: 1439px) {
+  header,
+  footer,
+  section {
+    padding: 57px 4vw !important;
+  }
+  main .section-1 .section-img {
+    max-width: 60% !important;
+    transform: translate(30%, 10%) !important;
+  }
+  main .section-2 img {
+    transform: translate(6%, -12%) !important;
+    max-width: 50% !important;
+  }
+  main .section .section-img {
+    max-width: 80% !important;
+    // transform: translate(30%, 10%);
+  }
+  footer svg {
+    margin-right: 4rem !important;
+  }
+  footer .footer-group {
+    grid-column-gap: 4rem !important;
+  }
 }
 // header
 header,
@@ -97,6 +123,7 @@ header {
   .navbar {
     display: flex;
     align-items: center;
+    position: relative;
     svg {
       overflow: visible;
     }
@@ -108,8 +135,59 @@ header {
     margin-left: 6%;
     margin-right: auto;
     margin-top: 1rem;
+    #menu {
+      width: 40px;
+      fill: white;
+      display: none;
+      @media (max-width: 799px) {
+        display: initial !important;
+      }
+    }
     .navbar-list {
       display: flex;
+      margin-top: 1rem;
+      z-index: 1000;
+      @media (max-width: 799px) {
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid;
+        position: absolute;
+        top: 70px;
+        left: 0%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        gap: 2rem;
+        background-color: $secondary;
+        padding: 2rem;
+        .navbar-list-li {
+          position: relative;
+          margin-right: 2rem;
+          width: 90%;
+          text-align: center;
+          a {
+            color: $blue;
+          }
+          svg {
+            path {
+              stroke: $primary-l;
+            }
+          }
+          .sub-menu {
+            margin-top: 1rem;
+            width: 100%;
+            position: initial;
+            display: flex;
+            flex-direction: column;
+            background-color: #efeff1;
+            visibility: visible;
+            opacity: 1;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: 1s;
+          }
+        }
+      }
     }
     .navbar-list-li {
       position: relative;
@@ -333,30 +411,5 @@ footer {
   }
   a:hover {
     text-decoration: underline;
-  }
-}
-@media (max-width: 1439px) {
-  header,
-  footer,
-  section {
-    padding: 57px 4vw !important;
-  }
-  main .section-1 .section-img {
-    max-width: 60% !important;
-    transform: translate(30%, 10%) !important;
-  }
-  main .section-2 img {
-    transform: translate(6%, -12%) !important;
-    max-width: 50% !important;
-  }
-  main .section .section-img {
-    max-width: 80% !important;
-    // transform: translate(30%, 10%);
-  }
-  footer svg {
-    margin-right: 4rem !important;
-  }
-  footer .footer-group {
-    grid-column-gap: 4rem !important;
   }
 }
