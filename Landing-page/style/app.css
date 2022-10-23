@@ -709,6 +709,9 @@ header .navbar {
   display: flex;
   align-items: center;
 }
+header .navbar svg {
+  overflow: visible;
+}
 header ul {
   list-style: none;
 }
@@ -891,6 +894,7 @@ main .section-3 .section-img {
   transform: translate(-28%, -3%);
   left: 0;
   top: 0;
+  max-width: 925px;
 }
 main .section-3 .text-group {
   max-width: 50%;
@@ -912,11 +916,12 @@ footer {
 }
 footer svg {
   margin-right: 12rem;
+  overflow: visible;
 }
 footer .footer-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 12rem;
+  width: 100%;
 }
 footer .footer-section {
   display: flex;
@@ -934,4 +939,29 @@ footer .sub-item {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1439px) {
+  header,
+footer,
+section {
+    padding: 57px 4vw !important;
+  }
+  main .section-1 .section-img {
+    max-width: 60% !important;
+    transform: translate(30%, 10%) !important;
+  }
+  main .section-2 img {
+    transform: translate(6%, -12%) !important;
+    max-width: 50% !important;
+  }
+  main .section .section-img {
+    max-width: 80% !important;
+  }
+  footer svg {
+    margin-right: 4rem !important;
+  }
+  footer .footer-group {
+    grid-column-gap: 4rem !important;
+  }
 }/*# sourceMappingURL=app.css.map */

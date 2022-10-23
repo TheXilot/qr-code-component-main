@@ -71,6 +71,7 @@ footer,
 section {
   padding: 57px 167px;
 }
+
 .text-group {
   max-width: 45%;
   h4 {
@@ -96,6 +97,9 @@ header {
   .navbar {
     display: flex;
     align-items: center;
+    svg {
+      overflow: visible;
+    }
   }
   ul {
     list-style: none;
@@ -282,6 +286,7 @@ main {
       transform: translate(-28%, -3%);
       left: 0;
       top: 0;
+      max-width: 925px;
     }
     .text-group {
       max-width: 50%;
@@ -304,11 +309,13 @@ footer {
   display: flex;
   svg {
     margin-right: 12rem;
+    overflow: visible;
   }
   .footer-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 12rem;
+    width: 100%;
+    // grid-column-gap: 12rem;
   }
   .footer-section {
     display: flex;
@@ -326,5 +333,30 @@ footer {
   }
   a:hover {
     text-decoration: underline;
+  }
+}
+@media (max-width: 1439px) {
+  header,
+  footer,
+  section {
+    padding: 57px 4vw !important;
+  }
+  main .section-1 .section-img {
+    max-width: 60% !important;
+    transform: translate(30%, 10%) !important;
+  }
+  main .section-2 img {
+    transform: translate(6%, -12%) !important;
+    max-width: 50% !important;
+  }
+  main .section .section-img {
+    max-width: 80% !important;
+    // transform: translate(30%, 10%);
+  }
+  footer svg {
+    margin-right: 4rem !important;
+  }
+  footer .footer-group {
+    grid-column-gap: 4rem !important;
   }
 }
