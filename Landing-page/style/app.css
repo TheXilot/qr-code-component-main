@@ -734,37 +734,33 @@ header .navbar {
   align-items: center;
   position: relative;
 }
+@media (max-width: 799px) {
+  header .navbar {
+    justify-content: space-between;
+  }
+}
 header .navbar svg {
   overflow: visible;
 }
-header ul {
-  list-style: none;
-}
-header .navbar-links {
-  margin-left: 6%;
-  margin-right: auto;
-  margin-top: 1rem;
-}
-header .navbar-links #menu {
+header .navbar #menu {
   width: 40px;
   fill: white;
   display: none;
 }
 @media (max-width: 799px) {
-  header .navbar-links #menu {
+  header .navbar #menu {
     display: initial !important;
   }
 }
-header .navbar-links .navbar-list {
+header .nav-wrapper {
   display: flex;
-  margin-top: 1rem;
-  z-index: 1000;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
 }
 @media (max-width: 799px) {
-  header .navbar-links .navbar-list {
+  header .nav-wrapper {
     flex-direction: column;
-    width: 100%;
-    border: 1px solid;
     position: absolute;
     top: 70px;
     left: 0%;
@@ -774,12 +770,59 @@ header .navbar-links .navbar-list {
     gap: 2rem;
     background-color: hsl(0deg, 0%, 100%);
     padding: 2rem;
+    z-index: 1000;
+  }
+  header .nav-wrapper .sign {
+    flex-direction: column;
+  }
+  header .nav-wrapper .sign .btn {
+    color: hsl(208deg, 49%, 24%);
+    font-weight: bold;
+  }
+  header .nav-wrapper .sign .secondary {
+    color: #fff;
+    background-image: linear-gradient(to right, hsl(355deg, 100%, 74%), hsl(356deg, 100%, 66%)) !important;
+  }
+}
+header ul {
+  list-style: none;
+}
+header .navbar-links {
+  margin-left: 6%;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+@media (max-width: 799px) {
+  header .navbar-links {
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+  header .navbar-links:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    overflow: hidden;
+    background-color: hsl(201deg, 11%, 66%);
+  }
+}
+header .navbar-links .navbar-list {
+  display: flex;
+  margin-top: 1rem;
+  z-index: 1000;
+  align-items: center;
+}
+@media (max-width: 799px) {
+  header .navbar-links .navbar-list {
+    flex-direction: column;
+    width: 100%;
   }
   header .navbar-links .navbar-list .navbar-list-li {
     position: relative;
     margin-right: 2rem;
-    width: 90%;
+    width: 100%;
     text-align: center;
+    margin: 0 0 1rem 0;
   }
   header .navbar-links .navbar-list .navbar-list-li a {
     color: hsl(208deg, 49%, 24%);

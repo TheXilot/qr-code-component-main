@@ -124,8 +124,53 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    @media (max-width: 799px) {
+      justify-content: space-between;
+    }
     svg {
       overflow: visible;
+    }
+    #menu {
+      width: 40px;
+      fill: white;
+      display: none;
+      @media (max-width: 799px) {
+        display: initial !important;
+      }
+    }
+  }
+  .nav-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    @media (max-width: 799px) {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0%;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      gap: 2rem;
+      background-color: $secondary;
+      padding: 2rem;
+      z-index: 1000;
+      .sign {
+        flex-direction: column;
+        .btn {
+          color: $blue;
+          font-weight: bold;
+        }
+        .secondary {
+          color: $white;
+          background-image: linear-gradient(
+            to right,
+            $primary-l,
+            $primary
+          ) !important;
+        }
+      }
     }
   }
   ul {
@@ -135,36 +180,32 @@ header {
     margin-left: 6%;
     margin-right: auto;
     margin-top: 1rem;
-    #menu {
-      width: 40px;
-      fill: white;
-      display: none;
-      @media (max-width: 799px) {
-        display: initial !important;
+    @media (max-width: 799px) {
+      width: 100%;
+      margin: 1rem 0 0 0;
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        overflow: hidden;
+        background-color: $gray-l;
       }
     }
     .navbar-list {
       display: flex;
       margin-top: 1rem;
       z-index: 1000;
+      align-items: center;
       @media (max-width: 799px) {
         flex-direction: column;
         width: 100%;
-        border: 1px solid;
-        position: absolute;
-        top: 70px;
-        left: 0%;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        gap: 2rem;
-        background-color: $secondary;
-        padding: 2rem;
         .navbar-list-li {
           position: relative;
           margin-right: 2rem;
-          width: 90%;
+          width: 100%;
           text-align: center;
+          margin: 0 0 1rem 0;
           a {
             color: $blue;
           }
