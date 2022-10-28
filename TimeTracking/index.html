@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="relative flex min-h-screen justify-center items-center overflow-hidden bg-[#0D1323] py-6 sm:py-12"
+    >
+      <div
+        class="grid lg:grid-rows-2 lg:grid-cols-4 lg:gap-y-8 gap-y-4 justify-items-center w-4/5"
+      >
+        <article
+          class="primary bg-[#1B1F48] rounded-lg lg:w-64 lg:h-[514px] w-full lg:row-span-2"
+        >
+          <div
+            class="bg-[#5746EA] rounded-lg p-8 pr-12 lg:h-[380px] flex items-center lg:block"
+          >
+            <img
+              class="w-20 h-20 border-white border-solid border-2 rounded-full lg:mb-8"
+              src="./images/image-jeremy.png"
+              alt=""
+            />
+            <div class="flex flex-col justify-center ml-8 lg:flex-none lg:ml-0">
+              <p class="lg:mt-4 lg:mb-4 text-gray-400">Report for</p>
+              <h1 class="text-5xl font-normal text-gray-50 lg:pb-24">
+                Jeremy Robson
+              </h1>
+            </div>
+          </div>
+          <div
+            class="p-8 pt-4 pr-12 rounded-lg w-full flex justify-between lg:block"
+          >
+            <h3 class="text-gray-500 mb-2 hover:text-gray-300 cursor-pointer">
+              Daily
+            </h3>
+            <h3 class="text-gray-300 mb-2 hover:text-gray-300 cursor-pointer">
+              Weekly
+            </h3>
+            <h3 class="text-gray-500 mb-2 hover:text-gray-300 cursor-pointer">
+              Monthly
+            </h3>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#FF8B64] w-full h-56 lg:h-60 lg:w-64 rounded-lg bg-[url('./images/icon-work.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Work</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">32hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#56C2E6] lg:w-64 w-full lg:h-60 h-56 rounded-lg bg-[url('./images/icon-play.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Play</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">10hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 8hrs</p>
+            </div>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#FF5E7D] lg:w-64 w-full lg:h-60 h-56 rounded-lg bg-[url('./images/icon-study.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Study</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">4hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#4BD07F] lg:w-64 w-full lg:h-60 h-56 rounded-lg bg-[url('./images/icon-exercise.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Exercice</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">4hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#7235D1] lg:w-64 w-full lg:h-60 h-56 rounded-lg bg-[url('./images/icon-social.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Social</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">5hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </article>
+        <article
+          class="relative bg-[#F1C75B] lg:w-64 w-full lg:h-60 h-56 rounded-lg bg-[url('./images/icon-self-care.svg')] bg-no-repeat bg-right-top"
+        >
+          <div
+            class="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-white">Self Care</p>
+              <p class="text-gray-300 font-bold leading-3">...</p>
+            </div>
+            <div class="flex justify-between items-center gap-2 lg:block">
+              <h3 class="text-white text-5xl mb-2">2hrs</h3>
+              <p class="text-gray-400 text-md">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">TheXilot</a>.
+    </div>
+  </body>
+</html>
