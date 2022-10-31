@@ -3,37 +3,37 @@
 function App() {
   const [timing, setTiming] = React.useState("Daily");
   const [data, setData] = React.useState({
-    Work: {
+    work: {
       daily: [5, 7],
       weekly: [32, 36],
       monthly: [103, 128],
       color: "#FF8B64",
     },
-    Play: {
+    play: {
       daily: [1, 2],
       weekly: [10, 8],
       monthly: [23, 29],
       color: "#56C2E6",
     },
-    Study: {
+    study: {
       daily: [0, 1],
       weekly: [4, 7],
       monthly: [13, 19],
       color: "#FF5E7D",
     },
-    Exercice: {
+    exercice: {
       daily: [1, 1],
       weekly: [4, 5],
       monthly: [11, 18],
       color: "#4BD07F",
     },
-    Social: {
+    social: {
       daily: [1, 3],
       weekly: [5, 10],
       monthly: [21, 23],
       color: "#7235D1",
     },
-    SelfCare: {
+    selfcare: {
       daily: [0, 1],
       weekly: [2, 2],
       monthly: [7, 11],
@@ -126,7 +126,7 @@ function Card(props) {
     >
       <div className="bg-[#1D204B] absolute top-12 lg:w-64 w-full lg:h-48 h-44 rounded-lg p-8 hover:bg-[#34397B] cursor-pointer">
         <div className="flex justify-between items-center mb-4">
-          <p className="text-white">{title}</p>
+          <p className="text-white capitalize">{title}</p>
           <p className="text-gray-300 font-bold leading-3">...</p>
         </div>
         <div className="flex justify-between items-center gap-2 lg:block">
