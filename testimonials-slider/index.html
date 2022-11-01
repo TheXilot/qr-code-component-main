@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full h-screen flex items-center justify-center">
+      <main class="w-[80vw] h-[80vh] border relative">
+        <div class="element w-full h-full relative">
+          <div class="text bg-slate-400 w-[60%] h-full flex items-center">
+            <p class="text-4xl z-50 font-medium">
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
+          </div>
+          <img
+            src="./images/image-tanya.jpg"
+            alt=""
+            class="absolute top-1/2 right-0 -translate-y-1/2 z-0 rounded-md shadow-[0px_4px_30px_0px_rgba(0,0,0,0.3)]"
+          />
+        </div>
+        <div
+          class="slider-buttons flex gap-0 w-fit absolute top-[86.5%] right-[28%] rounded-l-full rounded-r-full shadow-[0px_4px_30px_0px_rgba(0,0,0,0.3)]"
+        >
+          <img
+            src="./images/icon-prev.svg"
+            alt=""
+            class="bg-white px-5 py-4 rounded-l-full cursor-pointer"
+          />
+          <img
+            src="./images/icon-next.svg"
+            alt=""
+            class="bg-white px-5 py-4 rounded-r-full cursor-pointer"
+          />
+        </div>
+      </main>
+    </div>
+    <!-- “ I’ve been interested in coding for a while but never taken the jump, until now. 
+  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+  excited about the future. ”
+
+  Tanya Sinclair
+  UX Engineer
+
+  “ If you want to lay the best foundation possible I’d recommend taking this course. 
+  The depth the instructors go into is incredible. I now feel so confident about 
+  starting up as a professional developer. ”
+
+  John Tarkpor
+  Junior Front-end Developer -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
