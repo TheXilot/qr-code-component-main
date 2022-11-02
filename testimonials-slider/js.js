@@ -1,35 +1,41 @@
-function next() {
+// return [currentElement, next||previous]
+//params next , prev
+//
+function getElements(direction) {
   let elements = document.getElementsByClassName("element");
   let size = elements.length;
   let current = document.getElementsByClassName("element show")[0];
   let list = Array.prototype.slice.call(elements);
   let currentIndex = list.indexOf(current);
-  if (currentIndex + 1 >= size) currentIndex = -1;
-  let nextElement = list[currentIndex + 1];
-  //cacher current
-  current.classList.add("opacity-0");
-  current.classList.remove("opacity-1");
-  current.classList.remove("show");
+  let nextElement = null;
+  if (direction === "next") {
+    if (currentIndex + 1 >= size) currentIndex = -1;
+    nextElement = list[currentIndex + 1];
+  } else {
+    if (currentIndex - 1 < 0) currentIndex = size;
+    nextElement = list[currentIndex - 1];
+  }
+  return { current, nextElement };
+}
 
-  nextElement.classList.add("show");
-  nextElement.classList.remove("opacity-0");
-  nextElement.classList.add("opacity-1");
+function hide(element) {
+  element.classList.add("opacity-0");
+  element.classList.remove("opacity-1");
+  element.classList.remove("show");
+}
+function show(element) {
+  element.classList.add("show");
+  element.classList.remove("opacity-0");
+  element.classList.add("opacity-1");
+}
+
+function next() {
+  let { current, nextElement } = getElements("next");
+  hide(current);
+  show(nextElement);
 }
 function prev() {
-  let elements = document.getElementsByClassName("element");
-  let size = elements.length;
-  let current = document.getElementsByClassName("element show")[0];
-  let list = Array.prototype.slice.call(elements);
-  let currentIndex = list.indexOf(current);
-  console.log(currentIndex);
-  if (currentIndex - 1 < 0) currentIndex = size;
-  let nextElement = list[currentIndex - 1];
-  //cacher current
-  current.classList.add("opacity-0");
-  current.classList.remove("opacity-1");
-  current.classList.remove("show");
-
-  nextElement.classList.add("show");
-  nextElement.classList.remove("opacity-0");
-  nextElement.classList.add("opacity-1");
+  let { current, nextElement } = getElements("prev");
+  hide(current);
+  show(nextElement);
 }
