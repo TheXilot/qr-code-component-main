@@ -1,34 +1,44 @@
 // return [currentElement, next||previous]
 //params next , prev
 //
-function getElements(direction) {
-  let elements = document.getElementsByClassName("element");
-  let size = elements.length;
-  let current = document.getElementsByClassName("element show")[0];
-  let list = Array.prototype.slice.call(elements);
-  let currentIndex = list.indexOf(current);
-  let nextElement = null;
-  if (direction === "next") {
-    if (currentIndex + 1 >= size) currentIndex = -1;
-    nextElement = list[currentIndex + 1];
-  } else {
-    if (currentIndex - 1 < 0) currentIndex = size;
-    nextElement = list[currentIndex - 1];
-  }
-  return { current, nextElement };
-}
-function toggle(element) {
-  element.classList.toggle("show");
-  element.classList.toggle("opacity-0");
-  element.classList.toggle("opacity-1");
-}
+$(document).ready(() => {
+  $(".images").addClass(`bg-[url('${data[0][0]}')]`);
+});
+
+let data = [
+  [
+    "./images/image-tanya.jpg",
+    `“ I’ve been interested in coding for a while but never taken the jump, until now. 
+  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+  excited about the future. ”`,
+    "Tanya Sinclair",
+    "UX Engineer",
+  ],
+  [
+    "./images/image-john.jpg",
+    `“ If you want to lay the best foundation possible I’d recommend taking this course. 
+  The depth the instructors go into is incredible. I now feel so confident about 
+  starting up as a professional developer. ”`,
+    "John Tarkpor",
+    "Junior Front-end Developer",
+  ],
+];
+let i = 0;
 function next() {
-  let { current, nextElement } = getElements("next");
-  toggle(current);
-  toggle(nextElement);
+  $(".images").removeClass(`bg-[url('${data[i][0]}')]`);
+  i = i + 1;
+  if (i >= data.length) i = 0;
+  $(".images").addClass(`bg-[url('${data[i][0]}')]`);
+  $(".text-p").text(data[i][1]);
+  $(".text-author").text(data[i][2]);
+  $(".text-job").text(data[i][3]);
 }
 function prev() {
-  let { current, nextElement } = getElements("prev");
-  toggle(current);
-  toggle(nextElement);
+  $(".images").removeClass(`bg-[url('${data[i][0]}')]`);
+  i = i - 1;
+  if (i < 0) i = data.length - 1;
+  $(".images").addClass(`bg-[url('${data[i][0]}')]`);
+  $(".text-p").text(data[i][1]);
+  $(".text-author").text(data[i][2]);
+  $(".text-job").text(data[i][3]);
 }
