@@ -17,25 +17,18 @@ function getElements(direction) {
   }
   return { current, nextElement };
 }
-
-function hide(element) {
-  element.classList.add("opacity-0");
-  element.classList.remove("opacity-1");
-  element.classList.remove("show");
+function toggle(element) {
+  element.classList.toggle("show");
+  element.classList.toggle("opacity-0");
+  element.classList.toggle("opacity-1");
 }
-function show(element) {
-  element.classList.add("show");
-  element.classList.remove("opacity-0");
-  element.classList.add("opacity-1");
-}
-
 function next() {
   let { current, nextElement } = getElements("next");
-  hide(current);
-  show(nextElement);
+  toggle(current);
+  toggle(nextElement);
 }
 function prev() {
   let { current, nextElement } = getElements("prev");
-  hide(current);
-  show(nextElement);
+  toggle(current);
+  toggle(nextElement);
 }
