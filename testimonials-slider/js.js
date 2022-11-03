@@ -29,16 +29,26 @@ function next() {
   i = i + 1;
   if (i >= data.length) i = 0;
   $(".images").addClass(`bg-[url('${data[i][0]}')]`);
-  $(".text-p").text(data[i][1]);
-  $(".text-author").text(data[i][2]);
-  $(".text-job").text(data[i][3]);
+  $(".text")
+    .animate({ opacity: 0 }, 500, function () {
+      // $(this).text(data[i][1]);
+      $(".text-p").text(data[i][1]);
+      $(".text-author").text(data[i][2]);
+      $(".text-job").text(data[i][3]);
+    })
+    .animate({ opacity: 1 }, 500);
 }
 function prev() {
   $(".images").removeClass(`bg-[url('${data[i][0]}')]`);
   i = i - 1;
   if (i < 0) i = data.length - 1;
   $(".images").addClass(`bg-[url('${data[i][0]}')]`);
-  $(".text-p").text(data[i][1]);
-  $(".text-author").text(data[i][2]);
-  $(".text-job").text(data[i][3]);
+  $(".text")
+    .animate({ opacity: 0 }, 500, function () {
+      // $(this).text(data[i][1]);
+      $(".text-p").text(data[i][1]);
+      $(".text-author").text(data[i][2]);
+      $(".text-job").text(data[i][3]);
+    })
+    .animate({ opacity: 1 }, 500);
 }
