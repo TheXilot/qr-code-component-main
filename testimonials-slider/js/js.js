@@ -1,69 +1,45 @@
-// return [currentElement, next||previous]
-//params next , prev
-//
+import mydata from "./data.js";
+
+let data = await mydata;
+$(".loading").fadeOut();
+let i = 0;
+
 $(document).ready(() => {
   $(".images").addClass(`bg-[url('${data[0][0]}')]`);
+  $(".slider-text").first().attr("id", 0);
+  //load element
+  data.forEach((el, index) => {
+    if (index > 0) {
+      let $copy = $(".slider-text").first().clone();
+      $copy.find(".text-p").text(el[1]);
+      $copy.find(".text-author").text(el[2]);
+      $copy.find(".text-job").text(el[3]);
+      $copy.attr("id", index);
+      $copy.toggleClass("opacity-0");
+      $copy.appendTo("main");
+    } else {
+      $(".slider-text").first().find(".text-p").text(el[1]);
+      $(".slider-text").first().find(".text-author").text(el[2]);
+      $(".slider-text").first().find(".text-job").text(el[3]);
+    }
+  });
 });
 
-let data = [
-  [
-    "./images/image-tanya.jpg",
-    `“ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”`,
-    "Tanya Sinclair",
-    "UX Engineer",
-  ],
-  [
-    "./images/image-john.jpg",
-    `“ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”`,
-    "John Tarkpor",
-    "Junior Front-end Developer",
-  ],
-];
-let i = 0;
 function next() {
   $(".images").removeClass(`bg-[url('${data[i][0]}')]`);
   i = i + 1;
   if (i >= data.length) i = 0;
   $(".images").addClass(`bg-[url('${data[i][0]}')]`);
-  let $copy = $(".slider-text").clone();
-  $copy.find(".text-p").text(data[i][1]);
-  $copy.find(".text-author").text(data[i][2]);
-  $copy.find(".text-job").text(data[i][3]);
-  $copy.addClass(`id-${i}`);
-  $(".slider-text").toggle("opacity-0");
-  $copy.appendTo("main");
-
-  // $(".text").toggle("trans");
-  // $(".text").toggle("opacity-0");
-  // $(".text-p").text(data[i][1]);
-  // $(".text-author").text(data[i][2]);
-  // $(".text-job").text(data[i][3]);
-  // $(".text").toggle("opacity-0");
-
-  // $(".text")
-  //   .animate({ opacity: 0 }, 500, function () {
-  //     // $(this).text(data[i][1]);
-  //     $(".text-p").text(data[i][1]);
-  //     $(".text-author").text(data[i][2]);
-  //     $(".text-job").text(data[i][3]);
-  //   })
-  //   .animate({ opacity: 1 }, 500);
+  $(`.slider-text`).not(`#${i}`).toggleClass("opacity-0");
+  $(`#${i}`).toggleClass("opacity-0");
 }
 function prev() {
   $(".images").removeClass(`bg-[url('${data[i][0]}')]`);
   i = i - 1;
   if (i < 0) i = data.length - 1;
   $(".images").addClass(`bg-[url('${data[i][0]}')]`);
-  $(".text")
-    .animate({ opacity: 0 }, 500, function () {
-      // $(this).text(data[i][1]);
-      $(".text-p").text(data[i][1]);
-      $(".text-author").text(data[i][2]);
-      $(".text-job").text(data[i][3]);
-    })
-    .animate({ opacity: 1 }, 500);
+  $(`.slider-text`).not(`#${i}`).toggleClass("opacity-0");
+  $(`#${i}`).toggleClass("opacity-0");
 }
+document.querySelector(".next").addEventListener("click", next);
+document.querySelector(".prev").addEventListener("click", prev);
